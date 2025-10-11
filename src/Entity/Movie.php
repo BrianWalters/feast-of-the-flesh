@@ -286,7 +286,7 @@ class Movie
             return "Feast of the Flesh Fest Volume " . ($this->yearFeasted - 2009);
         }
 
-        if ($this->yearFeasted === 2024) {
+        if ($this->yearFeasted === 2023) {
             return "Xmas Feast Volume 1";
         }
 
