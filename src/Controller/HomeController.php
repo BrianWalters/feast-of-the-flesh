@@ -28,7 +28,7 @@ class HomeController extends AbstractController
 
         $description = implode(', ', array_map(fn(Movie $movie) => $movie->getTitle(), $movies));
 
-        $title = count($movies) > 0 ? $movies[0]->getTitle() : "Feast of the Flesh has not been scheduled yet";
+        $title = count($movies) > 0 ? $movies[0]->getFestivalName() : "Feast of the Flesh has not been scheduled yet";
 
         return $this->render('home/index.html.twig', [
             'title' => $title,
