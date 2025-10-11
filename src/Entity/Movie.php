@@ -279,4 +279,17 @@ class Movie
 
         return html_entity_decode($truncated, ENT_HTML5 | ENT_QUOTES);
     }
+
+    public function getFestivalName(): string
+    {
+        if ($this->yearFeasted < 2023) {
+            return "Feast of the Flesh Fest Volume " . $this->year - 2009;
+        }
+
+        if ($this->yearFeasted === 2024) {
+            return "Xmas Feast Volume 1";
+        }
+
+        return "Feast of the Flesh Fest Volume " . $this->year - 2010;
+    }
 }

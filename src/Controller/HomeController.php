@@ -26,15 +26,14 @@ class HomeController extends AbstractController
             ]
         );
 
-        $volumeNumber = $year - 2009;
-
         $description = implode(', ', array_map(fn(Movie $movie) => $movie->getTitle(), $movies));
 
+        $title = count($movies) > 0 ? $movies[0]->getTitle() : "Feast of the Flesh has not been scheduled yet";
+
         return $this->render('home/index.html.twig', [
-            'title' => "Feast of the Flesh Fest Volume $volumeNumber",
+            'title' => $title,
             'description' => $description,
             'movies' => $movies,
-            'volumeNumber' => $volumeNumber,
         ]);
     }
 }
