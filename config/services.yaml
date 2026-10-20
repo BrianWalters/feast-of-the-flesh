@@ -39,3 +39,11 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Command\CreateAdminCommand:
+        bind:
+            $name: "create-admin"
+
+    App\Command\GenerateCommand:
+        bind:
+            $name: "generate"

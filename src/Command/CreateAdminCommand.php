@@ -20,7 +20,7 @@ class CreateAdminCommand extends Command
     private UserManager $userManager;
 
     public function __construct(
-        string $name = null,
+        string $name,
         UserManager $userManager
     ) {
         parent::__construct($name);
