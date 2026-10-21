@@ -27,7 +27,7 @@ class Movie
 
     /**
      * @ORM\Column(type="datetimetz", nullable="true")
-     * @Assert\DateTime()
+     * @Assert\Type("\DateTimeInterface")
      */
     private ?\DateTimeInterface $startTime;
 
