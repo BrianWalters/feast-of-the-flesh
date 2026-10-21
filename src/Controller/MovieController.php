@@ -22,9 +22,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class MovieController extends AbstractController
 {
-    /**
-     * @Route("/movie/{movie}", name="movie_details")
-     */
+    #[Route("/movie/{movie}", name: "movie_details")]
     public function movieDetailsAction(
         Movie $movie,
         CommentRepository $commentRepository,
@@ -65,9 +63,7 @@ class MovieController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/comment", name="submit_comment", methods={"POST"})
-     */
+    #[Route("/comment", name: "submit_comment", methods: "POST")]
     public function submitComment(Request $request, EntityManagerInterface $entityManager)
     {
         $comment = new Comment();
